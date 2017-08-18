@@ -66,7 +66,7 @@
               </div>
               <div class="_bd">
                 <ul>
-                  <li v-for="item in newsList1"><router-link :to="'/news/info/' + item.newsId">{{item.newsTitle}}</router-link></li>
+                  <li v-for="item in newsList1.data"><router-link :to="'/news/info/' + item.newsId">{{item.newsTitle}}</router-link></li>
                 </ul>
               </div>
             </div>
@@ -79,7 +79,7 @@
               </div>
               <div class="_bd">
                 <ul>
-                  <li v-for="item in newsList2"><router-link :to="'/news/info/' + item.newsId">{{item.newsTitle}}</router-link></li>
+                  <li v-for="item in newsList2.data"><router-link :to="'/news/info/' + item.newsId">{{item.newsTitle}}</router-link></li>
                 </ul>
               </div>
             </div>
@@ -110,17 +110,27 @@
 <script>
 import lHeader from '~/components/header'
 import lFooter from '~/components/footer'
-import ProductData from '~/assets/js/product.data'
 
 export default {
+  name: 'index',
   components: {
     lHeader, lFooter
   },
-  data () {
-    return {
-      productList: ProductData,
-      newsList1: [],
-      newsList2: []
+  fetch ({ store }) {
+    return Promise.all([
+      store.dispatch('loadNews'),
+      store.dispatch('loadNews', { newsType: 2, page: 1 })
+    ])
+  },
+  computed: {
+    newsList1 () {
+      return this.$store.state.news.list1
+    },
+    newsList2 () {
+      return this.$store.state.news.list2
+    },
+    productList () {
+      return []
     }
   },
   methods: {
@@ -144,13 +154,6 @@ export default {
     }
   },
   mounted () {
-    this.$api.news.getList(1).then(({data}) => {
-      this.newsList1 = data.websiteNews
-    })
-
-    this.$api.news.getList(2).then(({data}) => {
-      this.newsList2 = data.websiteNews
-    })
   }
 }
 </script>

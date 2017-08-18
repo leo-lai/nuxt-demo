@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { Message } from 'element-ui'
 import { storage } from '~/assets/js/utils'
+import ProductData from '~/assets/js/product.data'
 
 let baseUrl = 'http://api.usee1.com.cn/useeproject/interface/'
 // 正式
@@ -66,7 +67,11 @@ const _api = {
   baseUrl,
   product: {
     getList () {
-
+      return new Promise((resolve) => {
+        resolve({
+          data: ProductData
+        })
+      })
     }
   },
   news: {

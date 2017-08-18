@@ -17,17 +17,32 @@ module.exports = {
   ** Customize the progress-bar color
   */
   loading: { color: '#3B8070' },
-
+  /*
+  ** Customize css
+  */
   css: [
     'element-ui/lib/theme-default/index.css',
-    {src: '~assets/css/base.scss', lang: 'scss'},
-    {src: '~assets/css/global.scss', lang: 'scss'}
+    {src: '~/assets/css/base.scss', lang: 'scss'},
+    {src: '~/assets/css/global.scss', lang: 'scss'}
   ],
-
+  /*
+  ** plugins
+  */
   plugins: [
-    {src: '~plugins/element-ui', ssr: true},
-    {src: '~plugins/utils', ssr: false}
+    {src: '~/plugins/element-ui.js', ssr: true}
   ],
+  /*
+  ** https://github.com/nuxt-community/axios-module
+  
+  modules: [
+    '@nuxtjs/axios'
+  ],
+  axios: {
+    baseURL,
+    credentials: false,
+    proxyHeaders: false
+  },
+  */
   /*
   ** Build configuration
   */
