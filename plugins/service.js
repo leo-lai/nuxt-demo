@@ -1,10 +1,9 @@
 import Vue from 'vue'
 import axios from 'axios'
-
-const baseURL = Object.is(process.env.NODE_ENV, 'production') ? 'https://api.ushiyihao.com/useeproject02/interface/' : 'http://api.usee1.com.cn/useeproject/interface/'
+import appConfig from '../app.config'
 
 const service = axios.create({
-  baseURL
+  baseURL: appConfig.serverURL
 })
 
 // 拦截器

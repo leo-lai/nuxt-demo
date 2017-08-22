@@ -3,13 +3,13 @@
     <l-header></l-header>
     <el-carousel class="l-index-banner" trigger="click" height="400px">
       <el-carousel-item>
-        <a href="/join" class="_img" style="background-image:url('https://www.ushiyihao.com/static/banner-001.jpg')"></a>
+        <a href="/join" class="_img" style="background-image:url('https://static.ushiyihao.com/web/banner-001.jpg')"></a>
       </el-carousel-item>
       <el-carousel-item>
-        <a href="/shop" class="_img" style="background-image:url('https://www.ushiyihao.com/static/banner-002.jpg')"></a>
+        <a href="/shop" class="_img" style="background-image:url('https://static.ushiyihao.com/web/banner-002.jpg')"></a>
       </el-carousel-item>
       <el-carousel-item>
-        <a href="/about" class="_img" style="background-image:url('https://www.ushiyihao.com/static/banner-003.jpg')"></a>
+        <a href="/about" class="_img" style="background-image:url('https://static.ushiyihao.com/web/banner-003.jpg')"></a>
       </el-carousel-item>
     </el-carousel>
     <div class="l-page-bd">
@@ -34,8 +34,8 @@
           <span>首款舒眼喷雾</span>
         </div>
         <el-carousel class="l-carousel-product" :interval="4000" type="card" height="350px">
-          <el-carousel-item v-for="(item,index) in productList" :key="index">
-            <router-link :to="'/shop/info/' + item.id" class="_item">
+          <el-carousel-item v-for="(item, index) in productList.data" :key="index">
+            <router-link :to="'/shop/' + item.id" class="_item">
               <div class="_img" @mouseenter="flipShow($event.currentTarget, item)" @mouseleave="timeout(item.timeid)">
                 <img style="visibility: hidden;" :src="item.img" alt="">
                 <img class="flip out" :src="item.qr" alt="">
@@ -66,7 +66,7 @@
               </div>
               <div class="_bd">
                 <ul>
-                  <li v-for="item in newsList1.data"><router-link :to="'/news/info/' + item.newsId">{{item.newsTitle}}</router-link></li>
+                  <li v-for="item in newsList1.data"><router-link :to="'/news/' + item.newsId">{{item.newsTitle}}</router-link></li>
                 </ul>
               </div>
             </div>
@@ -79,7 +79,7 @@
               </div>
               <div class="_bd">
                 <ul>
-                  <li v-for="item in newsList2.data"><router-link :to="'/news/info/' + item.newsId">{{item.newsTitle}}</router-link></li>
+                  <li v-for="item in newsList2.data"><router-link :to="'/news/' + item.newsId">{{item.newsTitle}}</router-link></li>
                 </ul>
               </div>
             </div>
@@ -96,7 +96,7 @@
         </div>
         <div class="l-text-center">
           <a target="_blank" href="http://www.o2opc-cn.com" style="color:inherit; text-decoration:none;">
-            <img src="~assets/images/sdh-logo.png" alt="">
+            <img src="https://static.ushiyihao.com/web/sdh-logo.png" alt="">
             <p>中国O2O私董会</p>
           </a>
         </div>
@@ -118,6 +118,7 @@ export default {
   },
   fetch ({ store }) {
     return Promise.all([
+      store.dispatch('loadProducts'),
       store.dispatch('loadNews'),
       store.dispatch('loadNews', { newsType: 2, page: 1 })
     ])
@@ -130,7 +131,7 @@ export default {
       return this.$store.state.news.list2
     },
     productList () {
-      return []
+      return this.$store.state.product.list
     }
   },
   methods: {
@@ -152,8 +153,6 @@ export default {
     timeout (timeid) {
       clearTimeout(timeid)
     }
-  },
-  mounted () {
   }
 }
 </script>

@@ -1,26 +1,11 @@
 @charset 'utf-8';
-html{font-size: 22px; height: 100%;}
-body {
-  margin: 0px; padding: 0px; height: 100%;
-  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
-  font-size: 14px; -webkit-font-smoothing: antialiased;
+html, body {
+  margin: 0px; padding: 0px; 
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif; -webkit-font-smoothing: antialiased;
 }
-/*字体与图标*/
-@font-face {
-  font-family: 'l-iconfont';  /* project id 328644 */
-  src: url('https://at.alicdn.com/t/font_42yotd8xpjuoko6r.eot');
-  src: url('https://at.alicdn.com/t/font_42yotd8xpjuoko6r.eot?#iefix') format('embedded-opentype'),
-  url('https://at.alicdn.com/t/font_42yotd8xpjuoko6r.woff') format('woff'),
-  url('https://at.alicdn.com/t/font_42yotd8xpjuoko6r.ttf') format('truetype'),
-  url('https://at.alicdn.com/t/font_42yotd8xpjuoko6r.svg#l-iconfont') format('svg');
-}
-
-[class^=l-icon]{
-  font-family: 'l-iconfont' !important;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-}
-
+html{font-size: 20px;}
+body{font-size: 14px; line-height: 1.6;}
+img{max-width: 100%;}
 /*
   http://www.css88.com/book/css/ 
   弹性布局===================
@@ -36,6 +21,8 @@ body {
 .l-flex-vhc,
 .l-flex-wrap {
   /*应用于父元素 */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 /*
@@ -47,13 +34,15 @@ body {
 .l-flex-hc,
 .l-flex-hvc {
   /*横向布局*/
-  flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
 }
 .l-flex-v,
 .l-flex-vc,
 .l-flex-vhc {
   /*纵向布局*/
-  flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
 }
 /*
   justify-content: flex-start | flex-end | center | space-between | space-around 用于不换行的弹性盒模型容器
@@ -61,26 +50,36 @@ body {
 */
 .l-flex-h {
   /*同等高度*/
-  align-items: strecth;
+  -webkit-box-align: strecth;
+      -ms-flex-align: strecth;
+          align-items: strecth;
 }
 .l-flex-hc,
 .l-flex-hvc {
   /*水平排列的垂直居中*/
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .l-flex-hvc {
   /*水平排列的水平居中*/
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .l-flex-vc,
 .l-flex-vhc{
   /*垂直排列的垂直居中*/
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .l-flex-vhc {
   /*垂直排列的水平居中*/
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /*
@@ -89,7 +88,8 @@ body {
 */
 .l-flex-wrap {
   /*水平排列换行布局*/
-  flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
   /*align-content: flex-start;*/
   /*justify-content: space-between;*/
 }
@@ -105,7 +105,9 @@ body {
 [class*='l-flex-'] > .l-rest {
   /*如果只有设置其中一个子项，其将霸占剩余部分*/
   display: block;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 /*弹性布局===================end*/
 

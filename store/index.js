@@ -25,8 +25,34 @@ export const actions = {
     .catch(error => {
       commit('news/GET_LIST_FAILURE', Object.assign({}, error, params))
     })
-  }
+  },
+  // 获取新闻详情
+  loadNewsInfo ({ commit }, params) {
+    commit('news/REQUEST_INFO', params)
+    return service.post('/websiteNews/websiteNewsInfo', {newsId: params.id}).then(({ data }) => {
+      const success = data.resultCode === 200 && data.data
+      if (success) {
+        commit('news/GET_INFO_SUCCESS', data.data)
+      } else {
+        commit('news/GET_INFO_FAILURE', params)
+      }
+    })
+    .catch(error => {
+      commit('news/GET_LIST_FAILURE', Object.assign({}, error, params))
+    })
+  },
 
   // 获取产品列表
-  
+  loadProducts ({ commit }, params = {}) {
+    commit('product/REQUEST_LIST', params)
+    commit('product/GET_LIST_SUCCESS', {list: productData})
+    return Promise.resolve(productData)
+  },
+  // 获取产品详情
+  loadProductInfo ({ commit }, params) {
+    commit('product/REQUEST_INFO', params)
+    var info = productData.find(item => item.id === Number(params.id))
+    commit('product/GET_INFO_SUCCESS', {data: info})
+    return Promise.resolve(info)
+  }
 }

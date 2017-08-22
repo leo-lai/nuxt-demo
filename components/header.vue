@@ -3,18 +3,18 @@
 		<el-row class="_inner" :gutter="0">
 		  <el-col :span="8">
 		  	<a class="l-page-hd-logo" href="/">
-			  	<img src="~assets/logo32px.png" alt="优视一号">
+			  	<img src="https://static.ushiyihao.com/logo32px.png" alt="优视一号">
 			  	<p>护眼解决方案服务商</p>
 		  	</a>
 		  </el-col>
 		  <el-col :span="16">
-		  	<el-menu class="l-page-hd-menu" mode="horizontal" router :default-active="$router.path" @select="clickMenu">
+		  	<el-menu class="l-page-hd-menu" mode="horizontal" router :default-active="$route.path" @select="clickMenu">
 				  <el-menu-item index="/">首页</el-menu-item>
 				  <el-submenu index="/sys/">
 				    <template slot="title">爱眼护眼</template>
-				    <el-menu-item index="/sys?_sto=eye" >瞳诊系统</el-menu-item>
-				    <el-menu-item index="/sys?_sto=train" >护眼训练</el-menu-item>
-				    <el-menu-item index="/sys?_sto=check" >体质检测</el-menu-item>
+				    <el-menu-item index="/sys/#eye" >瞳诊系统</el-menu-item>
+				    <el-menu-item index="/sys/#train" >护眼训练</el-menu-item>
+				    <el-menu-item index="/sys/#check" >体质检测</el-menu-item>
 				  </el-submenu>
 				  <el-menu-item index="/shop/">U视商城</el-menu-item>
 				  <el-menu-item index="/join/">区域合作</el-menu-item>
@@ -27,34 +27,34 @@
 
 <script>
 import VueScrollTo from 'vue-scrollto'
-
 export default {
 	methods: {
 		clickMenu (path) {
-			let query = this.$utils.url.getArgs(path)
-			let toEle = document.getElementById(query._sto)
-			if (query._sto && toEle) {
-				VueScrollTo.scrollTo(toEle, 300, {
-			    container: 'body',
-			    easing: 'ease-in',
-			    offset: -60,
-			    cancelable: true,
-			    onDone: function () {
-			      // scrolling is done
-			    },
-			    onCancel: function () {
-			      // scrolling has been interrupted
-			    }
-				})
-			} else {
-				window.location.href = path
+			if (this.$route.path.includes('/sys/') && this.$route.hash) {
+				setTimeout(() => {
+					let toEle = document.querySelector(this.$route.hash + '-part')
+					if (toEle) {
+						VueScrollTo.scrollTo(toEle, 300, {
+					    container: 'body',
+					    easing: 'ease-in',
+					    offset: -60,
+					    cancelable: true
+						})
+					} else {
+						// window.location.href = path
+					}
+				}, 200)
 			}
-			return false
 		}
+	},
+	mounted () {
+		this.clickMenu()
 	}
 }
 </script>
 <style lang="scss">
+.l-page-hd-menu > .el-menu-item.is-active{border-bottom: 5px solid #20a0ff;}
+.el-submenu .el-menu-item{min-width: 100%; }
 .l-page-hd{
 	background: rgba(255,255,255,1); padding: 0; border-bottom: 1px solid #efefef;
 	>._inner{width: 1000px; margin: auto;}

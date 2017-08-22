@@ -1,14 +1,27 @@
 @charset 'utf-8';
 html, body{background-color: #efeff4;}
-html{font-size: 20px;}
-body{line-height: 1.6;}
-img{max-width: 100%;border:none;}
 p{margin:0;}
-.l-page{min-width: 1000px; margin: auto;}
-.l-page-bd{
-	/* background: #eff3f5; */ background: #fff;
-	> ._inner{width: 1000px; margin: auto; min-height: 20rem; padding: 1rem 0; background: #fff; }
+
+/*字体与图标*/
+@font-face {
+  font-family: 'l-iconfont';  /* project id 328644 */
+  src: url('https://at.alicdn.com/t/font_42yotd8xpjuoko6r.eot');
+  src: url('https://at.alicdn.com/t/font_42yotd8xpjuoko6r.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_42yotd8xpjuoko6r.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_42yotd8xpjuoko6r.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_42yotd8xpjuoko6r.svg#l-iconfont') format('svg');
 }
+
+[class^=l-icon]{
+  font-family: 'l-iconfont' !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+.l-page{min-width: 1000px; margin: auto;}
+.l-page-bd{/* background: #eff3f5; */ background: #fff;}
+.l-page-bd>._inner{width: 1000px; margin: auto; min-height: 20rem; padding: 1rem 0; background: #fff; }
+
 .l-page-bd:before, .l-page-bd:after{
 	content: ''; height: 1px; font-size: 0; visibility: hidden; clear: both;
 }

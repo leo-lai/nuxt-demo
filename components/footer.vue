@@ -6,7 +6,7 @@
 			<p>
 				<el-tooltip placement="top">
 					<div slot="content">
-						<img width="200" height="200" src="~assets/images/usee-online.jpg" alt="">
+						<img width="200" height="200" src="https://static.ushiyihao.com/web/usee-online.jpg" alt="">
 					</div>
 					<i class="l-icon l-fs-xl l-margin-r">&#xe66f;</i>
 				</el-tooltip>
@@ -21,7 +21,7 @@
 		<div class="l-fixed-side">
 			<el-tooltip placement="left">
 				<div slot="content">
-					<img width="200" height="200" src="~assets/images/usee-online.jpg" alt="">
+					<img width="200" height="200" src="https://static.ushiyihao.com/web/usee-online.jpg" alt="">
 				</div>
 				<a class="_item">
 					<i class="l-icon">&#xe66f;</i>
