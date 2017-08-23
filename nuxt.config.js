@@ -50,7 +50,8 @@ module.exports = {
   */
   plugins: [
     {src: '~/plugins/element-ui.js', ssr: true},
-    {src: '~/plugins/utils.js', ssr: false}
+    {src: '~/plugins/utils.js', ssr: false},
+    {src: '~/plugins/baidu-seo.js', ssr: false}
   ],
   /*
   ** https://github.com/nuxt-community/axios-module
