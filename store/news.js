@@ -62,7 +62,6 @@ export const mutations = {
     state.info.fetching = false
   },
   GET_INFO_SUCCESS (state, action) {
-    console.log(action)
     state.info.fetching = false
     state.info.data = action
   }

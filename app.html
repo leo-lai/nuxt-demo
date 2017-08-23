@@ -9,5 +9,29 @@
     <script>
     !(feature.canvas && feature.classList) && window.location.replace('https://static.ushiyihao.com/update.html')
     </script>
+    <script>
+    // 自动推送工具代码
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+    /*
+     ** 统计代码获取
+     */
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement('script');
+      hm.src = 'https://hm.baidu.com/hm.js?2c0f546afd4baeee0973b341c7295a80';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-const apiConfig = require('./app.config')
+// const apiConfig = require('./app.config')
 
 module.exports = {
   // https://github.com/isaacs/node-lru-cache#options
@@ -50,8 +50,8 @@ module.exports = {
   */
   plugins: [
     {src: '~/plugins/element-ui.js', ssr: true},
-    {src: '~/plugins/utils.js', ssr: false},
-    {src: '~/plugins/baidu-seo.js', ssr: false}
+    {src: '~/plugins/utils.js', ssr: false}
+    // {src: '~/plugins/baidu-seo.js', ssr: false}
   ],
   /*
   ** https://github.com/nuxt-community/axios-module
@@ -69,15 +69,18 @@ module.exports = {
   */
   build: {
     vendor: ['axios', 'element-ui'],
-    // 为JS和Vue文件定制babel配置。https://nuxtjs.org/api/configuration-build/#analyze
-    babel: {
-      presets: ['es2015', 'stage-2'],
-      plugins: [
-        'transform-async-to-generator',
-        'transform-runtime'
-      ],
-      comments: true
-    },
+    // 为JS和Vue文件定制babel配置
+    // babel: {
+    //   presets: [
+    //     ['es2015', { modules: false }]
+    //   ],
+    //   plugins: [['component', [
+    //     {
+    //       libraryName: 'element-ui',
+    //       styleLibraryName: 'theme-default'
+    //     }
+    //   ]]]
+    // },
     /*
     ** Run ESLINT on save
     */

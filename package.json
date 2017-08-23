@@ -13,8 +13,6 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^3.1.4",
-    "async-validator": "^1.8.0",
     "axios": "^0.16.2",
     "element-ui": "^1.4.2",
     "nuxt": "^1.0.0-rc3",
@@ -22,7 +20,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
-    "babel-preset-stage-2": "^6.24.1",
+    "babel-plugin-component": "^0.10.0",
     "eslint": "^4.3.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-loader": "^1.9.0",
