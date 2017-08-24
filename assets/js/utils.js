@@ -207,7 +207,7 @@ export let utils = {
   isWindow (obj) {
     return obj != null && obj === obj.window
   },
-  isDOM (obj) {
+  isDom (obj) {
     return obj && typeof obj === 'object' && obj.nodeType === 1 && typeof obj.nodeName === 'string'
   },
   isString (value) {
