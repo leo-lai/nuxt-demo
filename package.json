@@ -13,8 +13,9 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
+    "async-validator": "^1.8.0",
     "axios": "^0.16.2",
+    "babel-polyfill": "^6.26.0",
     "element-ui": "^1.4.2",
     "nuxt": "^1.0.0-rc3",
     "vue-scrollto": "^2.7.2"

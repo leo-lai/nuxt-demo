@@ -25,7 +25,13 @@ Vue.mixin({
     	let elem = utils.isString(elem_or_selector) 
     		? document.querySelector(elem_or_selector) :
     		utils.isDom(elem_or_selector) ? elem_or_selector : null
-    	window.requestAnimationFrame && elem &&	VueScrollTo.scrollTo(elem, 300, options)
+      if(elem){
+        if (window.requestAnimationFrame) {
+          VueScrollTo.scrollTo(elem, 300, options)
+        } else {
+          window.scrollTo(0,0)
+        }  
+      }
     }
   }
 })
