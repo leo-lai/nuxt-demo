@@ -25,6 +25,7 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'fragment', content: '!' },
+      { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge,chrome=1' },
       { name: 'renderer', content: 'webkit|ie-comp|ie-stand' },
       { hid: 'keywords', name: 'keywords', content: '贵州优视一号生物科技有限公司,优视一号,U视一号,U视一号官网,U视一号商城,舒眼喷雾,U视喷喷,保护眼睛,缓解眼睛干涩,缓解视疲劳,缓解眼睛酸胀,系列护眼产品,改善视力模糊,保护视力健康,改善眼睛充血,首款舒眼喷雾,咨询电话400-180-6900' },
       { hid: 'description', name: 'description', content: '贵州优视一号生物科技有限公司,优视一号,U视一号,U视一号官网,U视一号商城,舒眼喷雾,U视喷喷,保护眼睛,缓解眼睛干涩,缓解视疲劳,缓解眼睛酸胀,系列护眼产品,改善视力模糊,保护视力健康,改善眼睛充血,首款舒眼喷雾,咨询电话400-180-6900' }
@@ -68,30 +69,18 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['axios', 'element-ui'],
-    // 为JS和Vue文件定制babel配置
-    // babel: {
-    //   presets: [
-    //     ['es2015', { modules: false }]
-    //   ],
-    //   plugins: [['component', [
-    //     {
-    //       libraryName: 'element-ui',
-    //       styleLibraryName: 'theme-default'
-    //     }
-    //   ]]]
-    // },
+    vendor: ['babel-polyfill', 'axios', 'element-ui', 'vue-scrollto'],
     /*
     ** Run ESLINT on save
     */
     extend (config, ctx) {
       if (ctx.dev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
+        // config.module.rules.push({
+        //   enforce: 'pre',
+        //   test: /\.(js|vue)$/,
+        //   loader: 'eslint-loader',
+        //   exclude: /(node_modules)/
+        // })
       }
     }
   }

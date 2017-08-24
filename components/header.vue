@@ -26,23 +26,12 @@
 </template>
 
 <script>
-import VueScrollTo from 'vue-scrollto'
 export default {
 	methods: {
 		clickMenu (path) {
 			if (this.$route.path.includes('/sys/') && this.$route.hash) {
 				setTimeout(() => {
-					let toEle = document.querySelector(this.$route.hash + '-part')
-					if (toEle) {
-						VueScrollTo.scrollTo(toEle, 300, {
-					    container: 'body',
-					    easing: 'ease-in',
-					    offset: -60,
-					    cancelable: true
-						})
-					} else {
-						// window.location.href = path
-					}
+					this.$scrollTo(document.querySelector(this.$route.hash + '-part'))
 				}, 200)
 			}
 		}

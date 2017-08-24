@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html {{ HTML_ATTRS }}>
   <head>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.4.4/babel.min.js"></script> -->
+    <!-- <script src="https://cdn.bootcss.com/babel-polyfill/7.0.0-alpha.19/polyfill.min.js"></script> -->
+    <!--[if IE]><![endif]-->
+    <script src="https://static.ushiyihao.com/feature.min.js"></script>
+    <script>
+    !feature.addEventListener && window.location.replace('https://static.ushiyihao.com/update.html')
+    </script>
     {{ HEAD }}
   </head>
   <body {{ BODY_ATTRS }}>
+    <div id="page-top"></div>
     {{ APP }}
-    <script src="https://static.ushiyihao.com/feature.min.js"></script>
-    <script>
-    !(feature.canvas && feature.classList) && window.location.replace('https://static.ushiyihao.com/update.html')
-    </script>
     <script>
     // 自动推送工具代码
     (function () {

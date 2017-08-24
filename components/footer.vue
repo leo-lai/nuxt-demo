@@ -36,7 +36,7 @@
 				<i class="l-icon">&#xe601;</i>
 				<span>在线<br>客服</span>
 			</a>
-			<a class="_item" @click="scrollTop">
+			<a class="_item" @click="$scrollTo('#page-top')">
 				<i class="l-icon">&#xe705;</i>
 				<span>返回<br>顶部</span>
 			</a>
@@ -47,25 +47,6 @@
 		</div>
 	</div>
 </template>
-<script>
-import VueScrollTo from 'vue-scrollto'
-
-export default {
-	methods: {
-		scrollTop () {
-			let toEle = document.getElementById('app')
-			if (toEle) {
-				VueScrollTo.scrollTo(toEle, 300, {
-			    container: 'body',
-			    easing: 'ease-in',
-			    offset: -60,
-			    cancelable: true
-				})
-			}
-		}
-	}
-}
-</script>
 
 <style lang="scss">
 .l-page-ft{
@@ -75,7 +56,7 @@ export default {
 }
 
 .l-fixed-side{
-	position: fixed; top: 50%; right: 0;  z-index: 1000;
+	position: fixed; top: 50%; right: 0;  z-index: 1000; transform: translate3d(0,-25%,0);
 	width: 60px;
 	._item{
 		background-color: #20a0ff;

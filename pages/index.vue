@@ -1,6 +1,5 @@
 <template>
-  <div class="l-page">
-    <l-header></l-header>
+  <div class="l-page-bd">
     <el-carousel class="l-index-banner" trigger="click" height="400px">
       <el-carousel-item>
         <a href="/join" class="_img" style="background-image:url('https://static.ushiyihao.com/web/banner-001.jpg')"></a>
@@ -12,110 +11,102 @@
         <a href="/about" class="_img" style="background-image:url('https://static.ushiyihao.com/web/banner-003.jpg')"></a>
       </el-carousel-item>
     </el-carousel>
-    <div class="l-page-bd">
-      <div class="_inner">
-        <!-- 产品列表 -->
-        <div class="l-column-tit">
-          <div class="_inner">
-            <h3>产品列表</h3>
-            <p>Product</p>
-          </div>
+    <div class="_inner">
+      <!-- 产品列表 -->
+      <div class="l-column-tit">
+        <div class="_inner">
+          <h3>产品列表</h3>
+          <p>Product</p>
         </div>
-        <div class="l-product-keyword">
-          <span>舒眼喷雾</span>
-          <span>保护眼睛</span>
-          <span>缓解眼睛干涩</span>
-          <span>缓解视疲劳</span>
-          <span>缓解眼睛酸胀</span>
-          <span>系列护眼产品</span>
-          <span>改善视力模糊</span>
-          <span>保护视力健康</span>
-          <span>改善眼睛充血</span>
-          <span>首款舒眼喷雾</span>
-        </div>
-        <el-carousel class="l-carousel-product" :interval="4000" type="card" height="350px">
-          <el-carousel-item v-for="(item, index) in productList.data" :key="index">
-            <router-link :to="'/shop/' + item.id" class="_item">
-              <div class="_img" @mouseenter="flipShow($event.currentTarget, item)" @mouseleave="timeout(item.timeid)">
-                <img style="visibility: hidden;" :src="item.img" alt="">
-                <img class="flip out" :src="item.qr" alt="">
-                <img class="flip in" :src="item.img" alt="">
-              </div>
-              <div class="_txt">
-                <h4>{{item.name}}</h4>
-                <p>{{item.desc}}</p>
-              </div>
-            </router-link>
-          </el-carousel-item>
-        </el-carousel>
-        <!-- 产品列表 end-->
-
-        <!-- U视资讯 -->
-        <div class="l-column-tit">
-          <div class="_inner">
-            <h3>U视资讯</h3>
-            <p>News</p>
-          </div>
-        </div>
-        <el-row class="l-padding-lr" :gutter="40">
-          <el-col :span="12">
-            <div class="l-box-news">
-              <div class="_hd">
-                <a class="l-fr" @click="$router.push('/news?tab=1')">更多&gt;&gt;</a>
-                <h3>企业动态</h3>
-              </div>
-              <div class="_bd">
-                <ul>
-                  <li v-for="item in newsList1.data"><router-link :to="'/news/' + item.newsId">{{item.newsTitle}}</router-link></li>
-                </ul>
-              </div>
-            </div>
-          </el-col>
-          <el-col :span="12">
-            <div class="l-box-news">
-              <div class="_hd">
-                <a class="l-fr" @click="$router.push('/news?tab=2')">更多&gt;&gt;</a>
-                <h3>护眼知识</h3>
-              </div>
-              <div class="_bd">
-                <ul>
-                  <li v-for="item in newsList2.data"><router-link :to="'/news/' + item.newsId">{{item.newsTitle}}</router-link></li>
-                </ul>
-              </div>
-            </div>
-          </el-col>
-        </el-row>
-        <!-- U视资讯 end-->
-        <br>
-        <!-- 友情链接 -->
-        <div class="l-column-tit">
-          <div class="_inner">
-            <h3>友情链接</h3>
-            <p>Links</p>
-          </div>
-        </div>
-        <div class="l-text-center">
-          <a target="_blank" href="http://www.o2opc-cn.com" style="color:inherit; text-decoration:none;">
-            <img src="https://static.ushiyihao.com/web/sdh-logo.png" alt="">
-            <p>中国O2O私董会</p>
-          </a>
-        </div>
-        <!-- 友情链接 end-->
-        <br><br>
       </div>
+      <div class="l-product-keyword">
+        <span>舒眼喷雾</span>
+        <span>保护眼睛</span>
+        <span>缓解眼睛干涩</span>
+        <span>缓解视疲劳</span>
+        <span>缓解眼睛酸胀</span>
+        <span>系列护眼产品</span>
+        <span>改善视力模糊</span>
+        <span>保护视力健康</span>
+        <span>改善眼睛充血</span>
+        <span>首款舒眼喷雾</span>
+      </div>
+      <el-carousel class="l-carousel-product" :interval="4000" type="card" height="350px">
+        <el-carousel-item v-for="(item, index) in productList.data" :key="index">
+          <router-link :to="'/shop/' + item.id" class="_item">
+            <div class="_img" @mouseenter="flipShow($event.currentTarget, item)" @mouseleave="timeout(item.timeid)">
+              <img style="visibility: hidden;" :src="item.img" alt="">
+              <img class="flip out" :src="item.qr" alt="">
+              <img class="flip in" :src="item.img" alt="">
+            </div>
+            <div class="_txt">
+              <h4>{{item.name}}</h4>
+              <p>{{item.desc}}</p>
+            </div>
+          </router-link>
+        </el-carousel-item>
+      </el-carousel>
+      <!-- 产品列表 end-->
+
+      <!-- U视资讯 -->
+      <div class="l-column-tit">
+        <div class="_inner">
+          <h3>U视资讯</h3>
+          <p>News</p>
+        </div>
+      </div>
+      <el-row class="l-padding-lr" :gutter="40">
+        <el-col :span="12">
+          <div class="l-box-news">
+            <div class="_hd">
+              <a class="l-fr" @click="$router.push('/news?tab=1')">更多&gt;&gt;</a>
+              <h3>企业动态</h3>
+            </div>
+            <div class="_bd">
+              <ul>
+                <li v-for="item in newsList1.data"><router-link :to="'/news/' + item.newsId">{{item.newsTitle}}</router-link></li>
+              </ul>
+            </div>
+          </div>
+        </el-col>
+        <el-col :span="12">
+          <div class="l-box-news">
+            <div class="_hd">
+              <a class="l-fr" @click="$router.push('/news?tab=2')">更多&gt;&gt;</a>
+              <h3>护眼知识</h3>
+            </div>
+            <div class="_bd">
+              <ul>
+                <li v-for="item in newsList2.data"><router-link :to="'/news/' + item.newsId">{{item.newsTitle}}</router-link></li>
+              </ul>
+            </div>
+          </div>
+        </el-col>
+      </el-row>
+      <!-- U视资讯 end-->
+      <br>
+      <!-- 友情链接 -->
+      <div class="l-column-tit">
+        <div class="_inner">
+          <h3>友情链接</h3>
+          <p>Links</p>
+        </div>
+      </div>
+      <div class="l-text-center">
+        <a target="_blank" href="http://www.o2opc-cn.com" style="color:inherit; text-decoration:none;">
+          <img src="https://static.ushiyihao.com/web/sdh-logo.png" alt="">
+          <p>中国O2O私董会</p>
+        </a>
+      </div>
+      <!-- 友情链接 end-->
+      <br><br>
     </div>
-    <l-footer></l-footer>
+  </div>
   </div>
 </template>
 <script>
-import lHeader from '~/components/header'
-import lFooter from '~/components/footer'
-
 export default {
   name: 'index',
-  components: {
-    lHeader, lFooter
-  },
   fetch ({ store }) {
     return Promise.all([
       store.dispatch('loadProducts'),
@@ -140,7 +131,7 @@ export default {
       item.timeid = setTimeout(() => {
         let eleFront = target.querySelector('.flip.in')
         let eleBack = target.querySelector('.flip.out')
-        if (eleFront) {
+        if (eleFront && eleFront.classList) {
           eleFront.classList.add('out')
           eleFront.classList.remove('in')
           setTimeout(function () {
