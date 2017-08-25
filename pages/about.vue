@@ -116,6 +116,9 @@
 <script>
 export default {
 	name: 'about',
+  head: {
+    title: '关于我们'
+  },
 	data () {
 		return {
 			tabIndex: 1

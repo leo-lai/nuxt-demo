@@ -69,18 +69,19 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    // analyze: true,
     vendor: ['babel-polyfill', 'axios', 'element-ui', 'vue-scrollto'],
     /*
     ** Run ESLINT on save
     */
     extend (config, ctx) {
       if (ctx.dev && ctx.isClient) {
-        // config.module.rules.push({
-        //   enforce: 'pre',
-        //   test: /\.(js|vue)$/,
-        //   loader: 'eslint-loader',
-        //   exclude: /(node_modules)/
-        // })
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
       }
     }
   }

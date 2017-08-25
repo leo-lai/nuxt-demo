@@ -70,6 +70,9 @@
 <script>
 export default {
   name: 'join',
+  head: {
+    title: '区域合作'
+  },
 	data () {
 		return {
 			stepIndex: 1

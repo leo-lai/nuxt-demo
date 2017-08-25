@@ -52,6 +52,9 @@
 <script>
 export default {
 	name: 'news',
+  head: {
+    title: '公司动态'
+  },
   fetch ({ store }) {
     return Promise.all([
       store.dispatch('loadNews'),

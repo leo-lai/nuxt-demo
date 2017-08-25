@@ -42,7 +42,10 @@
 </template>
 <script>
 export default {
-  name: 'sys'
+  name: 'sys',
+  head: {
+    title: '爱眼护眼'
+  }
 }
 </script>
 <style scoped lang="scss">

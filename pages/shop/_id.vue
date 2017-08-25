@@ -13,6 +13,9 @@
 <script>
 export default {
   name: 'shop-info',
+  head: {
+    title: 'U视商城'
+  },
 	fetch ({ store, params }) {
     return store.dispatch('loadProductInfo', params)
   },

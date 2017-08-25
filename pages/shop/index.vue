@@ -23,6 +23,9 @@
 <script>
 export default {
 	name: 'shop',
+  head: {
+    title: 'U视商城'
+  },
 	fetch ({ store }) {
     return store.dispatch('loadProducts')
   },

@@ -16,6 +16,9 @@
 <script>
 export default {
 	name: 'news-info',
+  head: {
+    title: '公司动态'
+  },
 	fetch ({ store, params }) {
     return store.dispatch('loadNewsInfo', params)
   },

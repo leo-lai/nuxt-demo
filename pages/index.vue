@@ -107,6 +107,9 @@
 <script>
 export default {
   name: 'index',
+  head: {
+    title: '首页'
+  },
   fetch ({ store }) {
     return Promise.all([
       store.dispatch('loadProducts'),
