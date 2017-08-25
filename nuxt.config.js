@@ -23,7 +23,7 @@ module.exports = {
     titleTemplate: '%s|贵州优视一号生物科技有限公司',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      // { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'fragment', content: '!' },
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge,chrome=1' },
       { name: 'renderer', content: 'webkit|ie-comp|ie-stand' },
@@ -76,12 +76,12 @@ module.exports = {
     */
     extend (config, ctx) {
       if (ctx.dev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
+        // config.module.rules.push({
+        //   enforce: 'pre',
+        //   test: /\.(js|vue)$/,
+        //   loader: 'eslint-loader',
+        //   exclude: /(node_modules)/
+        // })
       }
     }
   }

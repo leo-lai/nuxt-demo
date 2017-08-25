@@ -21,13 +21,13 @@
       </div>
       <div class="l-product-keyword">
         <span>舒眼喷雾</span>
-        <span>保护眼睛</span>
+        <span>怎样保护眼睛</span>
         <span>缓解眼睛干涩</span>
-        <span>缓解视疲劳</span>
+        <span>中药眼药水缓解视疲劳</span>
         <span>缓解眼睛酸胀</span>
         <span>系列护眼产品</span>
         <span>改善视力模糊</span>
-        <span>保护视力健康</span>
+        <span>保护视力健康知识宣传</span>
         <span>改善眼睛充血</span>
         <span>首款舒眼喷雾</span>
       </div>

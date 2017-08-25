@@ -45,6 +45,12 @@
 				<span style="padding:1rem 0;">上一页</span>
 			</a>
 		</div>
+		<div style="font-size:0;position:absolute;bottom:0;opacity:0;">
+      <h1>怎样保护眼睛 保护眼睛的方法 如何保护眼睛 保护眼睛的颜色</h1>
+      <h1>怎样缓解眼睛干涩 眼睛干涩怎么缓解 缓解眼睛干涩眼药水</h1>
+      <h1>中药眼药水缓解视疲劳 怎样缓解视疲劳 怎么缓解视疲劳</h1>
+      <h1>保护视力健康知识宣传 保护视力健康教案 保护视力呵护健康</h1>
+    </div>
 	</div>
 </template>
 
