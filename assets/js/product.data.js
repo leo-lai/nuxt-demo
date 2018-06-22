@@ -39,7 +39,7 @@ export default [
     id: 5,
     img: 'https://static.ushiyihao.com/web/baijiahei.jpg',
     qr: 'https://static.ushiyihao.com/web/baijiahei-qr.png',
-    info: 'https://static.ushiyihao.com/web/baijiahei-info.jpg',
+    info: 'https://static.ushiyihao.com/web/baijiahei-info2.jpg',
     name: '白加黑舒视眼贴',
     desc: '缓解视疲劳、提升睡眠质量，现代眼贴“黑科技”',
     flip: false
@@ -48,7 +48,7 @@ export default [
     id: 6,
     img: 'https://static.ushiyihao.com/web/yihaoyantieindex.jpg',
     qr: 'https://static.ushiyihao.com/web/yihaoyantieindex-qr.png',
-    info: 'https://static.ushiyihao.com/web/yihaoyantieindex-info.jpg',
+    info: 'https://static.ushiyihao.com/web/yantie-info-1.jpg',
     name: '舒润盈亮眼贴',
     desc: '针对青少年的眼贴',
     flip: false
@@ -57,7 +57,7 @@ export default [
     id: 7,
     img: 'https://static.ushiyihao.com/web/erhaoyantieindex.jpg',
     qr: 'https://static.ushiyihao.com/web/erhaoyantieindex-qr.png',
-    info: 'https://static.ushiyihao.com/web/erhaoyantieindex-info.jpg',
+    info: 'https://static.ushiyihao.com/web/yantie-info-3.jpg',
     name: '轻柔舒缓眼贴',
     desc: '针对办公一族的眼贴',
     flip: false
@@ -66,18 +66,9 @@ export default [
     id: 8,
     img: 'https://static.ushiyihao.com/web/sanhaoyantieidnex.jpg',
     qr: 'https://static.ushiyihao.com/web/sanhaoyantieidnex-qr.png',
-    info: 'https://static.ushiyihao.com/web/sanhaoyantieidnex-info.jpg',
+    info: 'https://static.ushiyihao.com/web/yantie-info-2.jpg',
     name: '晶润紧致眼贴',
     desc: '针对电脑一族的眼贴',
-    flip: false
-  },
-  {
-    id: 9,
-    img: 'https://static.ushiyihao.com/web/yiyonglengfuindex.jpg',
-    qr: 'https://static.ushiyihao.com/web/yiyonglengfuindex-qr.png',
-    info: 'https://static.ushiyihao.com/web/yiyonglengfuindex-info.jpg',
-    name: '医用冷敷眼贴',
-    desc: '15分钟重回明亮双眸',
     flip: false
   }
 ]

@@ -2,5 +2,5 @@ const serverURL = Object.is(process.env.NODE_ENV, 'production') ? 'https://api.u
 
 export default {
 	staticURL: 'https://static.ushiyihao.com/',
-	serverURL
+	serverURL: 'https://api.ushiyihao.com/useeproject02/interface/'
 }
