@@ -7,7 +7,7 @@
   		<div class="l-bd-tab">
   			<div class="_tit">
   				<a class="_item" :class="{'_active': tabIndex == 1}" @click="tabIndex = 1">关于我们</a>
-  				<a class="_item" :class="{'_active': tabIndex == 2}" @click="tabIndex = 2">团队介绍</a>
+  				<!-- <a class="_item" :class="{'_active': tabIndex == 2}" @click="tabIndex = 2">团队介绍</a> -->
   				<a class="_item" :class="{'_active': tabIndex == 3}" @click="tabIndex = 3">融资情况</a>
   			</div>
   			<div class="_cont">
@@ -33,8 +33,15 @@
 		    			<p>2014年9月，项目正式启动运营。</p>
 		    			<p>2014年，U视一号护眼项目启动，开设253家门店，通过五位一体明目法，帮助万名近视用户提升视力。</p>
 		    			<p>2016年，原有项目升级为“培元启明护目法”，综合运用经络刺激、穴位敷贴、手法推拿、视觉训练、体质干预、营养支持等方式，进行视力养护调理。</p>
-		    			<p>2016年12月，U视一号发展前景良好，获得启赋资本、蛮子基金、众投邦三大机构的天使轮投资。</p>
+		    			<p>2016年12月，U视一号发展前景良好，获得启赋资本、蛮子基金、慧鑫泉三大机构的天使轮投资。</p>
 		    			<p>2017年，U视一号集团进军电商，并建立三大销售渠道。同时将掌握的大量真实可靠的视力数据构建成属于自己的大数据管理中心，接轨智能医疗。</p>
+							<p>U视一号作为信和慈善基金——点滴爱项目组理事长单位，联合广州电视台广东教育行栏目组，共同发起青苗健康工程，进驻广东各中小学校，为孩子视力检测提供有力支持。</p>
+							<p>自主研发的瞳诊系统获得国家专利等证书。</p>
+							<p明目I型、II型、体质贴、等产品获得一类医疗器械资质。本草眼灸仪获得二类医疗器械资质。</p>
+							<p>2018年7月，获得分众传媒联合创始人倪伟先生投资。</p>
+							<p>2018年7月，与骏丰频谱签署战略合作，在骏丰全国系统引进U视护眼项目。</p>
+							<p>2018年8月，与达柔教育.未来学校签署战略合作，携手共进千余所学校，入校为学生进行视力体检工作。</p>
+							<p>2018年8月，与霍英东鹤年堂中医城签署战略合作协议，在全国5000余家中医门诊推广U视护眼项目。</p>
 		    		</div>
 						<br>
 		    		<div class="l-column-tit">
@@ -49,7 +56,7 @@
 		    			<p>地址：广州市天河区沙太路陶庄5号空间3F009</p>
 		    		</div>
   				</div>
-  				<div class="_item" :class="{'_active': tabIndex == 2}">
+  				<!-- <div class="_item" :class="{'_active': tabIndex == 2}">
   					<ul class="l-team-list">
   						<li>
   							<img class="_avatar" src="https://static.ushiyihao.com/web/li.jpg" alt="">
@@ -77,20 +84,20 @@
   						</li>
   					</ul>
 
-  				</div>
+  				</div> -->
   				<div class="_item" :class="{'_active': tabIndex == 3}">
   					<div class="l-padding l-text-center">
   						<h3 class="l-fs-l">三大知名风投机构携手投资</h3>
 							<p>
 								<img src="https://static.ushiyihao.com/web/img-101.jpg" alt="三大知名风投机构携手投资U视一号">
 								<img src="https://static.ushiyihao.com/web/img-102.jpg" alt="三大知名风投机构携手投资U视一号">
-								<img src="https://static.ushiyihao.com/web/img-103.jpg" alt="三大知名风投机构携手投资U视一号">
+								<img src="https://static.ushiyihao.com/web/20180908004.jpg" alt="三大知名风投机构携手投资U视一号">
 							</p>
 							<br>
 							<p>U视一号合作了253家线下门店专业从事是6-16青少年视力预防与保健；</p>
-							<p>2016年底公司获得启赋资本、蛮子基金、众投邦三大知名机构投资；</p>
+							<p>2016年底公司获得启赋资本、蛮子基金、慧鑫泉三大知名机构投资；</p>
 							<p>2017年公司将成为视力预防与保健解决方案平台；</p>
-							<p>2020年公司将在全国开设30家中医眼科门诊；</p>
+							<p>2020年公司将在全国开设32家中医眼科门诊；</p>
 							<br>
 							<p>一个平台</p>
 							<p>所有与解决眼疾、与视力相关产品议器均可与我平台合作</p>
@@ -99,7 +106,7 @@
 							<p>IT系统自主研发，千万级U粉，自行运营</p>
 							<br>
 							<p>四大产品</p>
-							<p>近视调理型产品：明目I型 、明目II型、体质贴、智慧护眼议、眼贴系列、喷喷第列</p>
+							<p>近视调理型产品：明目I型 、明目II型、体质贴、智慧护眼议、眼贴系列、喷喷系列、卫瞳贝贝</p>
 							<br><br><br>
 							<p>相关报道链接</p>
 							<p><a target="_blank" href="http://www.e521.com/pl/cjpl/482117.shtml">投资新闻链接（中华财会网）</a></p>

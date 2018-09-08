@@ -2,7 +2,7 @@
   <div class="l-page-bd">
     <el-carousel class="l-index-banner" trigger="click" height="400px">
       <el-carousel-item>
-        <a href="/join" class="_img" style="background-image:url('https://static.ushiyihao.com/web/banner-001.jpg')"></a>
+        <a href="/join" class="_img" style="background-image:url('https://static.ushiyihao.com/web/20180908001.jpg')"></a>
       </el-carousel-item>
       <el-carousel-item>
         <a href="/shop" class="_img" style="background-image:url('https://static.ushiyihao.com/web/banner-002.jpg')"></a>

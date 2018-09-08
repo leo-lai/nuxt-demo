@@ -1,14 +1,14 @@
 <template>
 	<div class="l-page-bd">
-    <div class="l-page-banner" style="background-image:url('https://static.ushiyihao.com/web/banner-001.jpg')">
-      <img src="https://static.ushiyihao.com/web/banner-001.jpg" alt="">
+    <div class="l-page-banner" style="background-image:url('https://static.ushiyihao.com/web/20180908001.jpg')">
+      <img src="https://static.ushiyihao.com/web/20180908001.jpg" alt="">
     </div>
   	<div class="_inner">
   		<p class="l-text-center">
-  			<img src="https://static.ushiyihao.com/web/u2.png" alt="U视一号区域合伙人">
+  			<img src="https://static.ushiyihao.com/web/20180908002.jpg" alt="U视一号区域合伙人">
   		</p>
   		<p class="l-text-center">
-  			<img src="https://static.ushiyihao.com/web/u1.png" alt="U视一号小U店长">
+  			<img src="https://static.ushiyihao.com/web/20180908003.jpg" alt="U视一号小U店长">
   		</p>
   		<div class="l-column-tit">
   			<div class="_inner">
